@@ -2,6 +2,7 @@ import useFetch from "../../customHooks/useFetch";
 import List from "../../components/List/List";
 import PeopleListItem from "../../components/List/PeopleListItem";
 import Loading from "../../components/Loading/Loading";
+import Pagination from "../../components/Pagination/Pagination";
 
 function Home() {
   const [people, peopleError, isLoadingPeople] = useFetch("https://swapi.dev/api/people/");
@@ -17,6 +18,7 @@ function Home() {
   return (
     <>
       {isLoadingPeople ? <Loading /> : listRender}
+      <Pagination />
     </>
   );
 }
