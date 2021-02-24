@@ -1,10 +1,13 @@
-type IPeopleListItem = {
+type IPeopleListItemProps = {
   person: any;
 }
-function PeopleListItem( {person}: IPeopleListItem ) {
+function PeopleListItem( {person}: IPeopleListItemProps ) {
   return (
     <>
-      <li>{person.name}</li>
+      <tr>
+        <td>{person.name}</td>
+        <td>{person.birth_year}</td>
+      </tr>
     </>
   );
 }

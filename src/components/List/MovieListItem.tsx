@@ -3,10 +3,10 @@
 //Placeholder
 //Placeholder
 //Placeholder
-type IPeopleListItem = {
+type IPeopleListItemProps = {
   person: any;
 }
-function PeopleListItem( {person}: IPeopleListItem ) {
+function PeopleListItem( {person}: IPeopleListItemProps ) {
   return (
     <>
       <li key={person.name}>{person.name}</li>

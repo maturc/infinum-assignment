@@ -1,11 +1,22 @@
-type IList = {
+import { updateJsxSelfClosingElement } from "typescript";
+
+type IListProps = {
   children: React.ReactChildren
 }
-function List( {children}: IList ) {
+
+function List( {children}: IListProps ) {
   return (
-    <ul>
-      {children}
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th><a href="#">Name</a></th>
+          <th><a href="#">Birth Year</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        {children}
+      </tbody>
+    </table>
   );
 }
 
