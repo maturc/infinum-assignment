@@ -1,7 +1,7 @@
-type IPeopleListItemProps = {
+type IPeopleTableItemProps = {
   person: any;
 }
-function PeopleListItem( {person}: IPeopleListItemProps ) {
+function PeopleTableItem( {person}: IPeopleTableItemProps ) {
   return (
     <>
       <tr>
@@ -12,4 +12,4 @@ function PeopleListItem( {person}: IPeopleListItemProps ) {
   );
 }
 
-export default PeopleListItem;
+export default PeopleTableItem;
