@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-function useList( list: any ) {
-  // 0: ascending
-  // 1: descending
-  // 2: unsorted
+// The API does not suport sorting so I had to do it client side
+// 0: unsorted
+// 1: ascending
+// 2: descending
+function useSort( list: any ) {
   const [sortNameDirection,      setSortNameDirection]      = useState<0 | 1 | 2>(0);
   const [sortBirthYearDirection, setSortBirthYearDirection] = useState<0 | 1 | 2>(0);
   const [sortNameIcon,      setSortNameIcon]      = useState<"" | "↑" | "↓">("");
@@ -80,4 +81,4 @@ function useList( list: any ) {
   return { handleNameClick, handleBirthYearClick, sortedArray, sortNameIcon, sortBirthYearIcon };
 }
 
-export default useList;
+export default useSort;
