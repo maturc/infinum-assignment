@@ -1,5 +1,3 @@
-import { updateJsxSelfClosingElement } from "typescript";
-
 type IListProps = {
   children: React.ReactChildren
 }
