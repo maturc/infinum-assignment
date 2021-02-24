@@ -1,6 +1,6 @@
 import React from "react";
-import List from "../../components/List/List";
-import PeopleListItem from "../../components/List/PeopleListItem";
+import PeopleTable from "../../components/PeopleTable/PeopleTable";
+import PeopleListItem from "../../components/PeopleTable/PeopleTableItem";
 import Loading from "../../components/Loading/Loading";
 
 function useRenderHome( people: any, peopleError: any, isLoadingPeople: boolean) {
@@ -12,7 +12,7 @@ function useRenderHome( people: any, peopleError: any, isLoadingPeople: boolean)
     });
   }
   const peopleList = isLoadingPeople ? <Loading /> :
-                       peopleError ? <h2>{peopleError.message}</h2> : <List>{listItems}</List>;
+                       peopleError ? <h2>{peopleError.message}</h2> : <PeopleTable>{listItems}</PeopleTable>;
   
   return [peopleList];
 }
