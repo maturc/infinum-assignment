@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,IAAI;CAAG;;AAEzB,AAAA,cAAc,CAAC;EACb,WAAW,EAAE,qBAAqB;CAEN;;AAH9B,AAEE,cAFY,CAEV,EAAE,CAAC,CAAC,CAAC;EACL,eAAe,EAAE,IAAI;CAAG;;AAC5B,AAAA,aAAa,CAAC;EACZ,YAAY,EAAE,IAAI;CAAG",
+    "sources": [
+        "PeopleTable.sass"
+    ],
+    "names": [],
+    "file": "PeopleTable.css"
+}

@@ -1,5 +1,5 @@
-//import "./pagination.css";
 import PButton from "./PButton";
+import "./Pagination.css";
 
 type IPaginationProps = {
   currentPage: number;
@@ -29,11 +29,11 @@ function Pagination( {currentPage, pageCount}: IPaginationProps ) {
     <PButton key={14} label={pageCount} />
   ]
   return (
-    <>
+    <div className="pagination">
       <PButton label={-3} disabled={ currentPage === 1 } />
       {conditionalButtons.splice(0,pageCount)}
       <PButton label={-1} disabled={ pageCount === currentPage } />
-    </>
+    </div>
   );
 }
 

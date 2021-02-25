@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./SearchBar.css";
 
 type ISearchBarProps = {
   searchQuery: string;
@@ -21,7 +22,7 @@ function SearchBar( {searchQuery, setSearchQuery}: ISearchBarProps ) {
   }
 
   return (
-    <input type="text" value={filter} onChange={(e) => handleSearch(e.target.value)} />
+    <input type="text" placeholder="Search" className="search__input" value={filter} onChange={(e) => handleSearch(e.target.value)} />
   );
 }
 

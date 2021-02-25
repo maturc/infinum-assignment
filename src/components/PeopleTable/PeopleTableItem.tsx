@@ -4,12 +4,12 @@ type IPeopleTableItemProps = {
   person: any;
 }
 function PeopleTableItem( {person}: IPeopleTableItemProps ) {
-  const id = person.url.split("/")[5]
+  const id = person.url.split("/")[5];
   return (
     <>
-      <tr>
+      <tr className="table__row">
         <td><Link to={`/details/${id}`}>{person.name}</Link></td>
-        <td>{person.birth_year}</td>
+        <td className="table__birth">{person.birth_year}</td>
       </tr>
     </>
   );

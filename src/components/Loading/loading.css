@@ -10,7 +10,7 @@
   width: 30%;
   height: 10px;
   position: absolute;
-  background-color: black;
+  background-color: #fee900;
   -webkit-animation: loading 1s ease-in-out infinite alternate;
           animation: loading 1s ease-in-out infinite alternate;
 }
@@ -32,4 +32,4 @@
     left: 100%;
   }
 }
-/*# sourceMappingURL=loading.css.map */
+/*# sourceMappingURL=Loading.css.map */

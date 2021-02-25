@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import Header from "../../components/Header/Header";
 import Loading from "../../components/Loading/Loading";
 import useDetails from "./useDetails";
+import "./Details.css";
 
 function Details() {
   const [data, error, isLoading] = useDetails();
@@ -29,7 +31,7 @@ function Details() {
   let renderTable;
   if (data) {
     renderTable = (
-      <table>
+      <table className="details__table">
         <tbody>
           <tr>
             <th>Name</th>
@@ -67,6 +69,7 @@ function Details() {
   }
   return (
     <>
+      <Header />
       {isLoading ? <Loading /> :
         error? <h2>{error.message}</h2> : renderTable}
     </>

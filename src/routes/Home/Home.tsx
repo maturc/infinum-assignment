@@ -1,5 +1,6 @@
 import Pagination from "../../components/Pagination/Pagination";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Header from "../../components/Header/Header";
 import useHome from "./useHome";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
   
   return (
     <div>
+      <Header />
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       { peopleList }
       <Pagination currentPage={currentPage} pageCount={pageCount}/>
