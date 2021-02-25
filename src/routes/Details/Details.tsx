@@ -14,7 +14,6 @@ function Details() {
       Promise.all(data.films.map((url: any)=>fetch(url))).then(responses =>
         Promise.all(responses.map((film: any) => film.json()))
       ).then(data => {
-        console.log(data);
         setFilmList(data)
       });
     //fetch homeworld
@@ -23,6 +22,9 @@ function Details() {
         .then((data)=> setHomeworld(data));
     }
   }, [data]);
+  const renderFilmList = filmList.map( (film: any) => {
+    return <li key={film.title}>{film.title}</li>
+  });
   
   let renderTable;
   if (data) {
@@ -51,18 +53,12 @@ function Details() {
           </tr>
           <tr>
             <th>Homeworld</th>
-            <td>{homeworld.name}</td>
+            <td>{ homeworld ? homeworld.name : <Loading/> }</td>
           </tr>
           <tr>
             <th>Films</th>
             <td>
-              <ul>
-                {
-                  filmList.map( (film: any) => {
-                    return <li key={film.title}>{film.title}</li>
-                  })
-                }
-              </ul>
+              <ul>{ filmList.length ? renderFilmList : <Loading /> }</ul>
             </td>
           </tr>
         </tbody>
